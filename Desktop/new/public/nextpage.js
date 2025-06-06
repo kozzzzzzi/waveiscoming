@@ -1,5 +1,5 @@
 // 기존 코드 유지
-const targetDate = new Date(Date.UTC(new Date().getUTCFullYear(), 5, 7, 5, 25, 0));
+const targetDate = new Date(Date.UTC(new Date().getUTCFullYear(), 5, 7, 6, 40, 0));
 
 const daysEl = document.getElementById('days');
 const hoursEl = document.getElementById('hours');
