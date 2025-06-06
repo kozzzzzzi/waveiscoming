@@ -1,0 +1,93 @@
+/* 기본 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* 카운트다운 컨테이너 */
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.countdown {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+}
+
+/* 영상 팝업 */
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-modal.hidden {
+  display: none;
+}
+
+.video-modal video {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  border: none;
+}
+
+/* 공유 버튼 */
+.share-button-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.share-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.x-icon {
+  width: 15px;
+  height: 15px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 600px) {
+  .countdown {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+
+  .x-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .share-button-container {
+    margin-top: 30px;
+  }
+
+  .video-modal video {
+    width: 95%;
+  }
+}

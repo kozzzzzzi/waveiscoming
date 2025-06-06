@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>We are owve!</title>
+  <link rel="stylesheet" href="nextpage.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="countdownContainer" class="countdown-container">
+    <div class="countdown">
+      <span id="days">00</span> :
+      <span id="hours">00</span> :
+      <span id="minutes">00</span> :
+      <span id="seconds">00</span>
+    </div>
+  </div>
+
+  <div id="videoModal" class="video-modal hidden">
+    <video id="finalVideo" src="/video.mp4" controls autoplay muted loop></video>
+  </div>
+
+  <div class="share-button-container">
+    <button id="twitterShareBtn" class="share-button">
+      <img src="X Corp.svg" alt="Share on Twitter" class="x-icon" />
+    </button>
+  </div>
+
+  <script src="nextpage.js"></script>
+</body>
+</html>

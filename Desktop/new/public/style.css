@@ -1,0 +1,109 @@
+/* 기본 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* SVG 이미지 컨테이너 */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* SVG 이미지 */
+img {
+  width: 600px;
+  max-width: 80%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* 모달 오버레이 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 모달 창 */
+.modal {
+  background: #ffffff00;
+  padding: 40px 30px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  gap: 1px;
+  max-width: 90vw;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* "We are" 텍스트 */
+.modal-text {
+  font-size: 24px;
+  color: #fff;
+}
+
+/* 입력 영역 (contenteditable) */
+.modal span[contenteditable] {
+  display: inline-block;
+  min-width: 50px;
+  padding: 4px 8px;
+  font-size: 24px;
+  color: #fff;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+/* placeholder처럼 빈 상태에서 보이도록 */
+.modal span[contenteditable]:empty::before {
+  content: ' ';
+  display: inline-block;
+}
+
+/* 숨김용 클래스 */
+.hidden {
+  display: none;
+}
+
+
+/* 반응형 처리 */
+@media (max-width: 600px) {
+  .modal {
+    flex-direction: column;
+    font-size: 20px;
+    padding: 30px 20px;
+  }
+
+  .modal-text {
+    font-size: 20px;
+  }
+
+  .modal span[contenteditable] {
+    font-size: 20px;
+    min-width: 60px;
+  }
+
+  img {
+    width: 80%;
+  }
+}
